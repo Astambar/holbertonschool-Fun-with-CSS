@@ -1,0 +1,30 @@
+// Couleurs
+$primary-color: #A11C3A;
+
+// Box-sizing global
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+// Lien
+a {
+    color: $primary-color;
+    text-decoration: none;
+    position: relative;
+
+    // Animation de soulignement
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: $primary-color;
+        transition: all .3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}

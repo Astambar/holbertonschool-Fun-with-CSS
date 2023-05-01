@@ -1,0 +1,64 @@
+// Box-sizing global et comportement de défilement
+*, *:before, *:after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+// Taille de police de base
+html {
+    font-size: 62.5%;
+}
+
+// Corps de la page
+body {
+    width: 751px;
+    height: 402px;
+    padding: 21px 0 0 18px;
+    margin: 0;
+}
+
+// Liste
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+
+    // Éléments de la liste
+    li {
+        padding-top: 20px;
+        background-color: #f7f7f7;
+        border: solid 1px #8d8d8d;
+        font-size: 2.5rem;
+        font-weight: bold;
+        border-radius: 10px;
+        height: 286px;
+        width: 183px;
+
+        // Icônes
+        .icon {
+            display: block;
+            width: 136px;
+            height: 180px;
+            margin: 13px auto 0;
+            background-image: url('0-sprite.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            // Position des icônes dans l'image sprite
+            &.i-html {
+                background-position: left;
+            }
+
+            &.i-css {
+                background-position:center ;
+             }
+
+             &.i-js {
+                 background-position :right ;
+             }
+         }
+     }
+}
